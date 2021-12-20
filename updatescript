@@ -61,6 +61,6 @@ chmod 644 /etc/crontab
 # sudo apt-get purge linux-image-4.1* -y
 sudo rm -R /update/tmpi
     sleep 3
-    reboot
+#   reboot
     exit 0;
        exit 0;
