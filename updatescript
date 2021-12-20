@@ -13,10 +13,10 @@ echo "OMV_MONIT_SERVICE_FILESYSTEM_SPACEUSAGE=97" >> /etc/default/openmediavault
 ln -s /dev/null /etc/udev/rules.d/80-net-name-slot.rules
 apt-get update
 apt-get -f -y install
-apt-get install -y debian-keyring debian-archive-keyring -y --force-yes
-apt install debian-archive-keyring -y --force-yes
+apt-get install -y debian-keyring debian-archive-keyring -y --allow
+apt install debian-archive-keyring -y --allow
 apt-get install -y --force-yes exfat-fuse exfat-utils quota
-apt-get install openjdk-8-jre openjdk-8-jre-headless -y --force-yes
+apt-get install openjdk-8-jre openjdk-8-jre-headless -y --allow
 sudo apt-get install bzip2 -y
 sudo apt-get install tar -y
 # sudo apt-get purge -y $(dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | head -n -1)
