@@ -15,7 +15,7 @@ apt-get update
 apt-get -f -y install
 apt-get install -y debian-keyring debian-archive-keyring -y --allow
 apt install debian-archive-keyring -y --allow
-apt-get install -y --force-yes exfat-fuse exfat-utils quota
+apt-get install -y --allow exfat-fuse exfat-utils quota
 apt-get install openjdk-8-jre openjdk-8-jre-headless -y --allow
 sudo apt-get install bzip2 -y
 sudo apt-get install tar -y
