@@ -27,7 +27,7 @@ sudo apt-get autoremove -y
 (echo 23456; echo 23456) | smbpasswd -a -s root
 miver="$(ls /root/minimserver/ | grep minimserver | cut -c13- | tr . 0)" 
 echo "$miver"
-newver="21"
+newver="201"
 if [ "$miver" -ne "$newver" ];
 then
 wget http://digitall.in.ua/MinimServer-2.1-linux-intel.tar.gz
