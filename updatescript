@@ -25,13 +25,13 @@ sudo chown -R root:root /srv/*
 sudo chmod -R 777 /srv/*
 sudo apt-get autoremove -y
 (echo 23456; echo 23456) | smbpasswd -a -s root
-miver="$(ls /opt/minimserver/ | grep minimserver | cut -c13- | tr . 0)" 
+miver="$(ls /root/minimserver/ | grep minimserver | cut -c13- | tr . 0)" 
 echo "$miver"
 newver="200018"
 if [ "$miver" -ne "$newver" ];
 then
 wget http://digitall.in.ua/MinimServer-2.0.18-linux-intel.tar.gz
-/opt/minimserver/bin/update MinimServer-2.0.18-linux-intel.tar.gz
+/root/minimserver/bin/update MinimServer-2.0.18-linux-intel.tar.gz
 fi
 chmod 644 /etc/crontab
 # ver="$(uname -r)"          # get kernel release version, e.g., "3.10.34-1-MANJARO"
