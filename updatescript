@@ -16,11 +16,10 @@ apt-get -f -y install
 apt-get install -y debian-keyring debian-archive-keyring -y --allow
 apt install debian-archive-keyring -y --allow
 apt-get install -y --allow exfat-fuse exfat-utils quota
-apt-get install openjdk-8-jre openjdk-8-jre-headless -y --allow
+apt-get install openjdk-11-jre openjdk-11-jre-headless -y
 sudo apt-get install bzip2 -y
 sudo apt-get install tar -y
 # sudo apt-get purge -y $(dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | head -n -1)
-omv-mkconf collectd
 monit restart collectd
 sudo chown -R root:root /srv/*
 sudo chmod -R 777 /srv/*
