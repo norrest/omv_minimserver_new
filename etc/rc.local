@@ -52,4 +52,5 @@ brctl stp mybridge on
 sleep 1
 sudo chmod -R 777 /srv/*
 service smbd restart
+ln -sf /etc/issue0 /etc/issue
 exit 0
