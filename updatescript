@@ -5,7 +5,7 @@ sudo cp -pfR /update/tmpi/hdd_test /root
 sudo cp -pfR /update/tmpi/xxx /root
 sudo cp -pfR /update/tmpi/rkm_lin /root
 sudo cp -pfR /update/tmpi/deleteasset /root
-sed -i 's/issue/issue0/g' /srv/salt/omv/deploy/issue/default.sls
+sed -i 's/issue"/issue0"/g' /srv/salt/omv/deploy/issue/default.sls
 bash /opt/minimserver/minimserver-0.8.5.2/bin/setup enable_autostart
 sudo sed -i '/ swap / s/^/#/' /etc/fstab
 sudo swapoff -a
