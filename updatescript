@@ -14,8 +14,11 @@ ln -s /dev/null /etc/udev/rules.d/80-net-name-slot.rules
 apt-get update
 apt-get -f -y install
 apt-get install -y debian-keyring debian-archive-keyring -y --allow
+apt-get install -y debian-keyring debian-archive-keyring -y 
 apt install debian-archive-keyring -y --allow
+apt install debian-archive-keyring -y
 apt-get install -y --allow exfat-fuse exfat-utils quota
+apt-get install -y exfat-fuse exfat-utils quota
 apt-get install openjdk-11-jre openjdk-11-jre-headless -y
 sudo apt-get install bzip2 -y
 sudo apt-get install tar -y
