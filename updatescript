@@ -37,10 +37,14 @@ echo ""
 echo ""
 echo ""
 echo "Попытка обновления minimserver для более новых до версии 2.2. Текущая версия:"
+echo ""
 ls /root/minimserver/ | grep minimserver
+echo ""
+echo ""
+echo ""
 if [ "$miver2" -ne "$newver" ];
 then
-read -r -p "Вы точно хотите обновить minimserver до версии 2.2? Если да, жмите Enter, елси нет то Esc" response
+read -r -p "Вы точно хотите обновить minimserver до версии 2.2? Посмотрите выше, возможно у вас установлена более новая версия!! Если да, жмите Enter, если нет то Esc" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]] | [ -z $response ]; then
  wget https://github.com/norrest/omv_minimserver/raw/master/MinimServer-2.2-linux-intel.tar.gz
@@ -75,6 +79,7 @@ chmod 644 /etc/crontab
 # fi
 # echo " у Вас последнее ядро, обновления не требуются!"   
 # sudo apt-get purge linux-image-4.1* -y
+echo "Скрипт обновления завершен"
 sudo rm -R /update/tmpi
     sleep 3
 #   reboot
