@@ -32,6 +32,10 @@ sudo apt-get autoremove -y
 
 miver2="$(ls /root/minimserver/ | grep minimserver | cut -c13- | tr . 0)"
 newver="202"
+echo ""
+echo ""
+echo ""
+echo ""
 echo "Попытка обновления minimserver для более новых до версии 2.2. Текущая версия:"
 ls /root/minimserver/ | grep minimserver
 if [ "$miver2" -ne "$newver" ];
