@@ -44,7 +44,7 @@ echo ""
 echo ""
 if [ "$miver2" -ne "$newver" ];
 then
-read -r -p "Вы точно хотите обновить minimserver до версии 2.2? Посмотрите выше, возможно у вас установлена более новая версия!! Если да, жмите Enter, если нет то Esc" response
+read -r -p "Вы точно хотите обновить minimserver до версии 2.2? Посмотрите выше, возможно у вас установлена более новая версия!! Если да, жмите Enter, если нет то Esc (или любые буквы) и только после этого Enter" response
  response=${response,,} # tolower
  if [[ $response =~ ^(yes|y| ) ]] | [ -z $response ]; then
  wget https://github.com/norrest/omv_minimserver/raw/master/MinimServer-2.2-linux-intel.tar.gz
