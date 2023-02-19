@@ -36,7 +36,7 @@ echo ""
 echo ""
 echo ""
 echo ""
-echo "Попытка обновления minimserver для более новых до версии 2.2. Текущая версия:"
+echo "Попытка обновления minimserver для более новых до версии 2.2. Текущая уже установленная у вас версия:"
 echo ""
 ls /root/minimserver/ | grep minimserver
 echo ""
