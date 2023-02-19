@@ -31,7 +31,7 @@ sudo apt-get autoremove -y
 (echo 23456; echo 23456) | smbpasswd -a -s root
 
 miver2="$(ls /root/minimserver/ | grep minimserver | cut -c13- | tr . 0)"
-newver="203"
+newver="202"
 echo ""
 echo ""
 echo ""
